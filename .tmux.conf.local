@@ -1,3 +1,4 @@
+#!/bin/bash
 # https://github.com/gpakosz/.tmux
 # (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
 #         without any warranty.
@@ -285,12 +286,32 @@ tmux_conf_copy_to_os_clipboard=false
 #set -g status-keys vi
 #set -g mode-keys vi
 
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
+# replace C-b by ` instead of using both prefixes
+set -gu prefix2
+unbind C-a
+unbind C-b
+set -g prefix `
+bind ` send-prefix
 
 # move status line to top
 #set -g status-position top
+
+# switch panes using Alt-arrow without prefix
+# unbind those in .tmux.conf
+unbind h
+unbind l
+unbind k
+unbind j
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# split panes using | and _
+# unbind those in .tmux.conf
+unbind _
+unbind -
+bind | split-window -h
+bind _ split-window -v
+unbind '"'
+unbind %
