@@ -279,16 +279,17 @@ tmux_conf_copy_to_os_clipboard=true
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
 #set -g mode-keys vi
 
-# replace C-b by ` instead of using both prefixes
+# remove secondary prefix in .tmux.conf
 set -gu prefix2
 unbind C-a
+# replace prefix C-b by `
 unbind C-b
 set -g prefix `
 bind ` send-prefix
@@ -296,22 +297,29 @@ bind ` send-prefix
 # move status line to top
 #set -g status-position top
 
-# switch panes using Alt-arrow without prefix
-# unbind those in .tmux.conf
+# unbind pane navigation in .tmux.conf
 unbind h
 unbind l
 unbind k
 unbind j
+# switch panes using Alt-arrow without prefix
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
-# split panes using | and _
-# unbind those in .tmux.conf
+# unbind pane splitting in .tmux.conf
 unbind _
 unbind -
+# split panes using | and _
 bind | split-window -h
 bind _ split-window -v
 unbind '"'
 unbind %
+
+# unbind window navigation in .tmux.conf
+unbind C-h
+unbind C-l
+# normal window navigation
+bind -n p previous-window
+bind -n n next-window
