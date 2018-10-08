@@ -252,8 +252,8 @@ tmux_conf_battery_vbar_palette='gradient'
 # symbols used to indicate whether battery is charging or discharging
 #tmux_conf_battery_status_charging='↑'       # U+2191
 #tmux_conf_battery_status_discharging='↓'    # U+2193
-#tmux_conf_battery_status_charging='⚡ '    # U+26A1
-tmux_conf_battery_status_charging='🔌 '    # U+1F50C
+tmux_conf_battery_status_charging='⚡ '    # U+26A1
+#tmux_conf_battery_status_charging='🔌 '    # U+1F50C
 tmux_conf_battery_status_discharging='🔋 ' # U+1F50B
 
 # clock style (when you hit <prefix> + t)
@@ -303,10 +303,10 @@ unbind l
 unbind k
 unbind j
 # switch panes using Alt-arrow without prefix
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
+bind -r M-Left select-pane -L
+bind -r M-Right select-pane -R
+bind -r M-Up select-pane -U
+bind -r M-Down select-pane -D
 
 # unbind pane splitting in .tmux.conf
 unbind _
@@ -321,5 +321,5 @@ unbind %
 unbind C-h
 unbind C-l
 # normal window navigation
-bind -n p previous-window
-bind -n n next-window
+bind -r p previous-window
+bind -r n next-window

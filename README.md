@@ -149,13 +149,11 @@ This configuration uses the following bindings:
  - `<prefix> C-c` creates a new session
  - `<prefix> C-f` lets you switch to another session by name
 
- - `<prefix> C-h` and `<prefix> C-l` let you navigate windows (default
-   `<prefix> n` and `<prefix> p` are unbound)
  - `<prefix> Tab` brings you to the last active window
 
- - `<prefix> -` splits the current pane vertically
+ - `<prefix> |` splits the current pane vertically
  - `<prefix> _` splits the current pane horizontally
- - `<prefix> h`, `<prefix> j`, `<prefix> k` and `<prefix> l` let you navigate
+ - `<meta>-Left`, `<meta>-Down`, `<meta>-Up` and `<prefix>-Right` let you navigate
    panes ala Vim
  - `<prefix> H`, `<prefix> J`, `<prefix> K`, `<prefix> L` let you resize panes
  - `<prefix> <` and `<prefix> >` let you swap panes
