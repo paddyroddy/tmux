@@ -325,10 +325,12 @@ bind -r p previous-window
 bind -r n next-window
 
 # List of plugins
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @tpm_plugins '               \
+    tmux-plugins/tpm                \
+    tmux-plugins/tmux-sensible      \
+    tmux-plugins/tmux-resurrect     \
+    tmux-plugins/tmux-continuum     \
+'
 set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 
