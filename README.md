@@ -259,6 +259,7 @@ Beside custom variables mentioned above, the `tmux_conf_theme_status_left` and
 `tmux_conf_theme_status_right` variables support usual tmux syntax, e.g. using
 `#()` to call an external command that inserts weather information provided by
 [wttr.in]:
+
 ```
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #(curl wttr.in?format=3) , %R , %d %b | #{username}#{root} | #{hostname} '
 ```
