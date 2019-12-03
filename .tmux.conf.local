@@ -312,7 +312,7 @@ bind -r M-Down select-pane -D
 unbind _
 unbind -
 # split panes using | and _
-bind \ split-window -h
+bind '\' split-window -h
 bind - split-window -v
 unbind '"'
 unbind %
