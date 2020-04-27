@@ -202,7 +202,9 @@ To make use of these symbols, there are several options:
 -   use a [pre-patched font][powerline patched fonts]
 -   use your preferred font along with the [Powerline font][powerline font] (that
     only contains the Powerline symbols): [this highly depends on your operating
-    system and your terminal emulator][terminal support]
+    system and your terminal emulator][terminal support], for instance here's a
+    screenshot of iTerm2 configured to use `PowerlineSymbols.otf`
+    ![iTerm2 + Powerline font](https://user-images.githubusercontent.com/553208/62243890-8232f500-b3de-11e9-9b8c-51a5d38bdaa8.png)
 
 [source code pro]: https://github.com/adobe-fonts/source-code-pro/releases/tag/2.030R-ro/1.050R-it
 [powerline patched fonts]: https://github.com/powerline/fonts
@@ -254,19 +256,6 @@ This configuration supports the following builtin variables:
 -   `#{username}`: SSH/Mosh aware username information
 -   `#{username_ssh}`: SSH aware username information, blank when not connected
     to a remote server through SSH/Mosh
-
-Beside custom variables mentioned above, the `tmux_conf_theme_status_left` and
-`tmux_conf_theme_status_right` variables support usual tmux syntax, e.g. using
-`#()` to call an external command that inserts weather information provided by
-[wttr.in]:
-
-```
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #(curl wttr.in?format=3) , %R , %d %b | #{username}#{root} | #{hostname} '
-```
-
-![Weather information from wttr.in](https://user-images.githubusercontent.com/553208/52175490-07797c00-27a5-11e9-9fb6-42eec4fe4188.png)
-
-[wttr.in]: https://github.com/chubin/wttr.in#one-line-output
 
 ### Accessing the macOS clipboard from within tmux sessions
 
