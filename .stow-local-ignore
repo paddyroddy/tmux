@@ -1,0 +1,7 @@
+\.git
+\.gitattributes
+\.github
+\.gitignore
+
+README.*
+LICENSE.*
