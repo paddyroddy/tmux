@@ -115,7 +115,7 @@ Troubleshooting
 Features
 --------
 
- - `C-a` acts as secondary prefix, while keeping default `C-b` prefix
+ - ` acts as both prefixes
  - visual theme inspired by [Powerline][]
  - [maximize any pane to a new window with `<prefix> +`][maximize-pane]
  - SSH/Mosh aware username and hostname status line information
@@ -157,8 +157,7 @@ Bindings
 --------
 
 tmux may be controlled from an attached client by using a key combination of a
-prefix key, followed by a command key. This configuration uses `C-a` as a
-secondary prefix while keeping `C-b` as the default prefix. In the following
+prefix key, followed by a command key. This configuration uses ` as both prefixes. In the following
 list of key bindings:
   - `<prefix>` means you have to either hit <kbd>Ctrl</kbd> + <kbd>a</kbd> or <kbd>Ctrl</kbd> + <kbd>b</kbd>
   - `<prefix> c` means you have to hit <kbd>Ctrl</kbd> + <kbd>a</kbd> or <kbd>Ctrl</kbd> + <kbd>b</kbd> followed by <kbd>c</kbd>
@@ -174,12 +173,10 @@ This configuration uses the following bindings:
  - `<prefix> C-c` creates a new session
  - `<prefix> C-f` lets you switch to another session by name
 
- - `<prefix> C-h` and `<prefix> C-l` let you navigate windows (default
-   `<prefix> n` and `<prefix> p` are unbound)
  - `<prefix> Tab` brings you to the last active window
 
- - `<prefix> -` splits the current pane vertically
- - `<prefix> _` splits the current pane horizontally
+ - `<prefix> \` splits the current pane vertically
+ - `<prefix> -` splits the current pane horizontally
  - `<prefix> h`, `<prefix> j`, `<prefix> k` and `<prefix> l` let you navigate
    panes ala Vim
  - `<prefix> H`, `<prefix> J`, `<prefix> K`, `<prefix> L` let you resize panes
