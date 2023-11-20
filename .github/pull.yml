@@ -2,5 +2,4 @@ version: "1"
 rules:
   - base: main
     upstream: gpakosz:master
-    mergeMethod: squash
-
+    mergeMethod: merge
